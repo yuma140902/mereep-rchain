@@ -9,7 +9,6 @@ pub struct Blockchain {
 
 pub trait WorldState {
     fn get_user_ids(&self) -> Vec<String>;
-    // https://doc.rust-jp.rs/book-ja/ch04-03-slices.html?highlight=string#%E5%BC%95%E6%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E6%96%87%E5%AD%97%E5%88%97%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9
     fn get_account_by_id_mut(&self, id: &str) -> Option<&mut Account>;
     fn get_account_by_id(&self, id: &str) -> Option<&Account>;
     fn create_account(&mut self, id: String, account_type: AccountType)
