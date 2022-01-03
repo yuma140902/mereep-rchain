@@ -52,3 +52,13 @@ pub enum AccountType {
     User,
     Contract,
 }
+
+impl Account {
+    pub fn new(account_type: AccountType) -> Self {
+        Self {
+            tokens: 0,
+            acc_type: account_type,
+            store: HashMap::new(),
+        }
+    }
+}
